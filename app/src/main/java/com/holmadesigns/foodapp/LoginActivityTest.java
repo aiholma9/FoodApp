@@ -33,7 +33,7 @@ public class LoginActivityTest extends AppCompatActivity {
         if (firebaseAuth.getCurrentUser() != null){
             Intent intent = new Intent(LoginActivityTest.this, MainActivity.class);
             startActivity(intent);
-            //finish();
+            finish();
         }
 
         username = (MaterialEditText) findViewById(R.id.email);
