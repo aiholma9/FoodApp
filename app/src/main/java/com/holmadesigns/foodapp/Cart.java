@@ -13,18 +13,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.holmadesigns.foodapp.Common.Common;
 import com.holmadesigns.foodapp.Database.DBHelper;
-import com.holmadesigns.foodapp.Database.Database;
-import com.holmadesigns.foodapp.Model.Category;
 import com.holmadesigns.foodapp.Model.Order;
 import com.holmadesigns.foodapp.Model.Request;
 import com.holmadesigns.foodapp.ViewHolder.CartAdapter;
-import com.holmadesigns.foodapp.ViewHolder.MenuViewHolder;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;

@@ -6,18 +6,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.holmadesigns.foodapp.Common.Common;
 import com.holmadesigns.foodapp.Database.DBHelper;
-import com.holmadesigns.foodapp.Database.Database;
-import com.holmadesigns.foodapp.Model.Food;
 import com.holmadesigns.foodapp.Model.Order;
 import com.squareup.picasso.Picasso;
 

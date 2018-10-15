@@ -47,12 +47,12 @@ public class OrderStatus extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recycler_order.setLayoutManager(layoutManager);
 
-        loadOrders(Common.currentUser.getName());
+        loadOrders(Common.currentUser.getPhone());
     }
 
-    private void loadOrders(String name) {
+    private void loadOrders(String phone) {
         query = FirebaseDatabase.getInstance().getReference(Common.REQUEST)
-                .orderByChild("name").equalTo(name);
+                .orderByChild("phone").equalTo(phone);
 
         options = new FirebaseRecyclerOptions.Builder<Request>()
                 .setQuery(query, Request.class).build();
