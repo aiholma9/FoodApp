@@ -57,7 +57,7 @@ public class SignUp extends AppCompatActivity {
 
                         else{
                             progressDialog.dismiss();
-                            User user = new User(edtName.getText().toString(), edtPassword.getText().toString());
+                            User user = new User(edtName.getText().toString(), edtPassword.getText().toString(), edtPhone.getText().toString());
                             databaseReference.child(edtPhone.getText().toString()).setValue(user);
                             Toast.makeText(SignUp.this, "Sign up successfully!", Toast.LENGTH_SHORT).show();
                             finish();
