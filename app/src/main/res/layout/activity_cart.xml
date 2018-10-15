@@ -50,7 +50,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/btnOrder"
+                    android:id="@+id/btnPlaceOrder"
                     android:text="Place Order"
                     android:textColor="@color/white"
                     android:layout_margin="8dp"
