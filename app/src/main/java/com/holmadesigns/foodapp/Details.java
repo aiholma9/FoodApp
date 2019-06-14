@@ -6,15 +6,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.holmadesigns.foodapp.Common.Common;
-import com.holmadesigns.foodapp.Model.Food;
+import com.holmadesigns.foodapp.Database.DBHelper;
+import com.holmadesigns.foodapp.Model.Order;
 import com.squareup.picasso.Picasso;
 
 public class Details extends AppCompatActivity {
@@ -25,9 +24,6 @@ public class Details extends AppCompatActivity {
     CoordinatorLayout coordinatorLayout;
     FloatingActionButton btnCart;
     ElegantNumberButton numberButton;
-
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +55,16 @@ public class Details extends AppCompatActivity {
         btnCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                new DBHelper(getBaseContext()).addToCart(new Order(
+                        Common.food.getName(),
+                        numberButton.getNumber(),
+                        Common.food.getPrice(),
+                        Common.food.getDiscount()
+                ));
 
+                Toast.makeText(Details.this, "Added to Cart", Toast.LENGTH_SHORT).show();
             }
+
         });
     }
 }
